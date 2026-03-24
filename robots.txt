@@ -1,0 +1,79 @@
+# ════════════════════════════════════════════════════════
+# robots.txt — Siva Nagendra Babu Chennam Portfolio
+# © 2026 Siva Nagendra Babu Chennam. All Rights Reserved.
+#
+# This file instructs all web crawlers, spiders, and bots
+# NOT to index, cache, or scrape any part of this website.
+# Unauthorised crawling or data harvesting is prohibited.
+# ════════════════════════════════════════════════════════
+
+# ── Block ALL bots from ALL pages ──
+User-agent: *
+Disallow: /
+
+# ── Explicitly block known data scrapers & AI crawlers ──
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: scrapy
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ── No sitemap exposed (reduces crawlability) ──
+# Sitemap: (intentionally omitted)

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siva Nagendra Babu Chennam | Business Analyst</title>
+<meta name="robots" content="noarchive, nosnippet, noimageindex">
+<meta name="author" content="Siva Nagendra Babu Chennam">
+<meta name="copyright" content="© 2026 Siva Nagendra Babu Chennam. All rights reserved.">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Nunito:wght@300;400;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-mid: #243358;
+  --navy-light: #2e4070;
+  --gold: #c8973a;
+  --gold-light: #e8b660;
+  --cream: #faf7f2;
+  --warm-white: #fff9f2;
+  --warm-grey: #f0ece4;
+  --text: #1e2535;
+  --text-mid: #4a5568;
+  --text-soft: #718096;
+  --sand: #e8dfc8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── PRINT BLOCK ── */
+@media print {
+  body * { display: none !important; }
+  body::before {
+    display: block !important;
+    content: '© 2026 Siva Nagendra Babu Chennam. Printing disabled.';
+    font-size: 1.5rem; text-align: center; padding: 4rem;
+  }
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  background: var(--navy);
+  padding: 0 5%;
+  display: flex; justify-content: space-between; align-items: center;
+  height: 64px;
+  box-shadow: 0 2px 20px rgba(26,39,68,0.3);
+}
+.nav-name { font-family: 'Lora', serif; font-size: 1.05rem; color: #fff; }
+.nav-name span { color: var(--gold-light); font-style: italic; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.65);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-light); }
+.nav-cta {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.5rem 1.4rem;
+  background: var(--gold); color: var(--navy);
+  text-decoration: none; border-radius: 2px; transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--gold-light); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1f3a6e 100%);
+  display: grid; grid-template-columns: 1fr 420px;
+  padding: 80px 5% 0; align-items: center; gap: 3rem;
+  position: relative; overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px; pointer-events: none;
+}
+.hero-text { position: relative; z-index: 2; padding: 4rem 0; }
+
+.hero-greeting {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem;
+}
+.hero-name {
+  font-family: 'Lora', serif;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 600; line-height: 1.1; color: #fff;
+  letter-spacing: -0.01em; margin-bottom: 0.75rem;
+}
+.hero-title {
+  font-size: 1rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
+}
+.hero-summary {
+  font-size: 1rem; line-height: 1.85;
+  color: rgba(255,255,255,0.75); max-width: 52ch; margin-bottom: 2.5rem;
+}
+.hero-badges { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.badge {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 20px;
+  background: rgba(200,151,58,0.18); color: var(--gold-light);
+  border: 1px solid rgba(200,151,58,0.35);
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-gold {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.85rem 2rem;
+  background: var(--gold); color: var(--navy);
+  text-decoration: none; border-radius: 3px; transition: all 0.2s;
+}
+.btn-gold:hover { background: var(--gold-light); }
+.btn-ghost-white {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.85rem 2rem;
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  text-decoration: none; border-radius: 3px; transition: all 0.2s;
+}
+.btn-ghost-white:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+.hero-visual { position: relative; z-index: 2; padding: 4rem 0; }
+.stat-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat-card {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 1.5rem 1.25rem; text-align: center;
+  backdrop-filter: blur(8px); transition: transform 0.25s, background 0.25s;
+}
+.stat-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.12); }
+.stat-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+.stat-number {
+  font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 600;
+  color: var(--gold-light); line-height: 1; margin-bottom: 0.3rem;
+}
+.stat-label {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+}
+.location-strip {
+  margin-top: 12px; background: rgba(200,151,58,0.15);
+  border: 1px solid rgba(200,151,58,0.3); border-radius: 10px;
+  padding: 0.9rem 1.25rem; display: flex; align-items: center; gap: 0.75rem;
+  color: var(--gold-light); font-size: 0.83rem; font-weight: 600;
+}
+
+/* ── IMPACT STRIP ── */
+.impact-strip {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 4rem 5%; display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 2rem; text-align: center;
+}
+.impact-num {
+  font-family: 'Lora', serif; font-size: 3rem; font-weight: 600;
+  color: var(--gold-light); line-height: 1; margin-bottom: 0.5rem;
+}
+.impact-num .sup { font-size: 1.5rem; vertical-align: super; }
+.impact-desc {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55); line-height: 1.5;
+}
+
+/* ── SECTIONS ── */
+.section { padding: 5.5rem 5%; }
+.section-alt { background: var(--warm-white); }
+.section-eyebrow {
+  font-family: 'Caveat', cursive; font-size: 1.15rem;
+  color: var(--gold); margin-bottom: 0.4rem;
+}
+.section-title {
+  font-family: 'Lora', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600; color: var(--navy); letter-spacing: -0.02em;
+  line-height: 1.15; margin-bottom: 2.5rem;
+}
+.section-divider {
+  width: 50px; height: 3px; border-radius: 2px;
+  background: var(--gold); margin-bottom: 1rem;
+}
+
+/* ── ABOUT ── */
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.about-text p { font-size: 0.97rem; line-height: 1.9; color: var(--text-mid); margin-bottom: 1.2rem; }
+.about-text p strong { color: var(--navy); }
+.contact-card { background: var(--navy); border-radius: 14px; padding: 2rem; margin-top: 2rem; }
+.contact-card-title { font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 1.2rem; }
+.contact-row {
+  display: flex; align-items: center; gap: 0.85rem; padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-row .ico { font-size: 1.1rem; }
+.contact-row span { font-size: 0.87rem; color: rgba(255,255,255,0.75); }
+.contact-row .label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: block; }
+
+/* Skill bars */
+.skill-category { margin-bottom: 2rem; }
+.skill-cat-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--navy); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.skill-cat-label::after { content: ''; flex: 1; height: 1px; background: var(--sand); }
+.skill-bar-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.65rem; }
+.skill-name-lbl { font-size: 0.82rem; color: var(--text-mid); min-width: 140px; }
+.skill-track { flex: 1; height: 7px; background: var(--warm-grey); border-radius: 10px; overflow: hidden; }
+.skill-fill {
+  height: 100%; background: linear-gradient(90deg, var(--navy), var(--gold));
+  border-radius: 10px; transition: width 1.2s ease;
+}
+.skill-pct { font-size: 0.72rem; font-weight: 700; color: var(--navy); min-width: 32px; text-align: right; }
+
+/* ── EXPERIENCE ── */
+.exp-timeline { position: relative; padding-left: 3rem; }
+.exp-timeline::before {
+  content: ''; position: absolute; left: 10px; top: 8px; bottom: 8px;
+  width: 2px; background: linear-gradient(to bottom, var(--gold), var(--navy-light), var(--sand));
+  border-radius: 2px;
+}
+.exp-item {
+  position: relative; margin-bottom: 2.5rem; background: #fff;
+  border-radius: 14px; padding: 2rem; box-shadow: 0 2px 18px rgba(26,39,68,0.07);
+  border-left: 4px solid transparent; transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.exp-item:hover { border-left-color: var(--gold); box-shadow: 0 6px 30px rgba(26,39,68,0.13); transform: translateX(4px); }
+.exp-item::before {
+  content: ''; position: absolute; left: -3.65rem; top: 1.5rem;
+  width: 14px; height: 14px; background: var(--gold); border-radius: 50%;
+  border: 3px solid var(--cream); box-shadow: 0 0 0 2px var(--gold);
+}
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; }
+.exp-role { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); }
+.exp-period {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.25rem 0.75rem; background: rgba(200,151,58,0.12);
+  color: var(--gold); border: 1px solid rgba(200,151,58,0.3); border-radius: 20px;
+}
+.exp-company {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; color: var(--text-soft);
+  text-transform: uppercase; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.exp-company::before { content: '🏢'; font-size: 0.85rem; }
+.exp-bullets { list-style: none; }
+.exp-bullets li {
+  font-size: 0.88rem; line-height: 1.75; color: var(--text-mid);
+  padding: 0.3rem 0 0.3rem 1.4rem; position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.exp-bullets li:last-child { border-bottom: none; }
+.exp-bullets li::before { content: '◆'; position: absolute; left: 0; top: 0.38rem; color: var(--gold); font-size: 0.5rem; }
+
+/* ── PROJECTS ── */
+.projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.proj-card {
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 16px rgba(26,39,68,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.proj-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(26,39,68,0.14); }
+.proj-header { padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.proj-icon-wrap {
+  width: 50px; height: 50px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; flex-shrink: 0;
+}
+.proj-icon-wrap.blue { background: rgba(26,39,68,0.1); }
+.proj-icon-wrap.gold { background: rgba(200,151,58,0.12); }
+.proj-icon-wrap.rust { background: rgba(184,92,56,0.1); }
+.proj-title { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.3; }
+.proj-body { padding: 0 1.5rem 1.5rem; }
+.proj-desc { font-size: 0.84rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 1rem; }
+.proj-outcome {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; font-weight: 700; color: var(--navy);
+  background: rgba(200,151,58,0.1); border-radius: 8px; padding: 0.5rem 0.85rem;
+}
+.proj-outcome::before { content: '✦'; color: var(--gold); }
+
+/* ── SKILLS VISUAL ── */
+.skills-vis-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.donut-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.donut-item { text-align: center; }
+.donut-svg { width: 110px; height: 110px; margin: 0 auto 0.75rem; display: block; }
+.donut-label { font-size: 0.75rem; font-weight: 700; color: var(--navy); letter-spacing: 0.05em; }
+.donut-sub { font-size: 0.67rem; color: var(--text-soft); margin-top: 0.2rem; }
+.tools-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.6rem; }
+.tool-chip { font-size: 0.78rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 20px; cursor: default; transition: all 0.2s; }
+.chip-navy { background: var(--navy); color: #fff; }
+.chip-navy:hover { background: var(--navy-light); }
+.chip-gold { background: rgba(200,151,58,0.14); color: var(--gold); border: 1px solid rgba(200,151,58,0.3); }
+.chip-gold:hover { background: rgba(200,151,58,0.25); }
+.chip-soft { background: var(--warm-grey); color: var(--text-mid); }
+.chip-soft:hover { background: var(--sand); color: var(--navy); }
+
+/* ── CREDENTIALS ── */
+.certs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.cert-card {
+  background: #fff; border-radius: 14px; padding: 1.75rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  box-shadow: 0 2px 14px rgba(26,39,68,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cert-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,39,68,0.12); }
+.cert-badge-icon {
+  width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+}
+.cert-issuer { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.cert-name { font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); line-height: 1.3; }
+.edu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
+.edu-card {
+  border-radius: 14px; padding: 2rem; color: #fff; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+}
+.edu-card::after { content: '🎓'; position: absolute; bottom: -0.5rem; right: 0.75rem; font-size: 3.5rem; opacity: 0.12; }
+.edu-degree { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.edu-school { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-bottom: 0.4rem; }
+.edu-year { font-size: 0.7rem; font-weight: 700; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── CONTACT ── */
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.contact-form-area h3 { font-family: 'Lora', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.5rem; }
+.contact-form-area p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.7; margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); display: block; margin-bottom: 0.4rem; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.85rem 1rem;
+  border: 1.5px solid var(--sand); border-radius: 8px;
+  font-family: 'Nunito', sans-serif; font-size: 0.9rem;
+  color: var(--text); background: #fff; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--navy); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.submit-btn {
+  width: 100%; padding: 0.95rem; background: var(--navy); color: #fff;
+  border: none; border-radius: 8px; font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.submit-btn:hover { background: var(--navy-light); }
+.contact-info-side h3 { font-family: 'Lora', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 1.5rem; }
+.ci-cards { display: flex; flex-direction: column; gap: 0.85rem; }
+.ci-card {
+  display: flex; align-items: center; gap: 1.1rem; background: #fff;
+  border-radius: 12px; padding: 1rem 1.25rem;
+  box-shadow: 0 2px 12px rgba(26,39,68,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.ci-card:hover { transform: translateX(4px); box-shadow: 0 4px 20px rgba(26,39,68,0.1); }
+.ci-card-icon {
+  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+}
+.ci-card-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-soft); }
+.ci-card-value { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+.availability-block {
+  margin-top: 1.5rem; padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(200,151,58,0.12), rgba(200,151,58,0.06));
+  border: 1px solid rgba(200,151,58,0.3); border-radius: 12px;
+  display: flex; align-items: center; gap: 0.85rem;
+}
+@keyframes pulse { 0%,100%{ box-shadow:0 0 0 3px rgba(34,197,94,0.2); } 50%{ box-shadow:0 0 0 6px rgba(34,197,94,0.1); } }
+.avail-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(34,197,94,0.2); animation: pulse 2s infinite; }
+.avail-text { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+.avail-text span { color: #16a34a; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); color: rgba(255,255,255,0.5);
+  padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: center;
+}
+footer p { font-size: 0.75rem; }
+footer a { color: var(--gold-light); text-decoration: none; }
+.footer-sig { font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--gold-light); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  #hero { grid-template-columns: 1fr; padding: 90px 5% 3rem; }
+  .hero-visual { display: none; }
+  .about-layout, .contact-layout, .skills-vis-wrap { grid-template-columns: 1fr; gap: 3rem; }
+  .projects-grid, .certs-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
+  .impact-strip { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .section { padding: 4rem 5%; }
+}
+@media (max-width: 560px) {
+  .projects-grid, .certs-grid, .edu-grid { grid-template-columns: 1fr; }
+  .impact-strip { grid-template-columns: 1fr 1fr; }
+  .donut-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Siva <span>Chennam</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:sivanagendra.ch@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <div class="hero-greeting">Hello, I'm</div>
+    <h1 class="hero-name">Siva Nagendra<br>Babu Chennam</h1>
+    <div class="hero-title">Business Analyst &amp; Implementation Consultant</div>
+    <p class="hero-summary">I bridge the gap between business goals and technical solutions — gathering requirements, building Power BI dashboards, leading UAT, and driving user adoption across finance, nonprofit, and SaaS environments.</p>
+    <div class="hero-badges">
+      <span class="badge">📊 Power BI</span>
+      <span class="badge">⚙️ ERP &amp; CRM</span>
+      <span class="badge">🔄 Agile / Scrum</span>
+      <span class="badge">✅ UAT Lead</span>
+      <span class="badge">🎓 M.S. Data Science</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#experience" class="btn-gold">See My Work</a>
+      <a href="#contact" class="btn-ghost-white">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-number">4<span style="font-size:1.2rem">+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏭</div>
+        <div class="stat-number">3</div>
+        <div class="stat-label">Industries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🎓</div>
+        <div class="stat-number">2</div>
+        <div class="stat-label">Master's Degrees</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏅</div>
+        <div class="stat-number">5<span style="font-size:1.2rem">+</span></div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+    <div class="location-strip">
+      <span>📍</span>
+      <span>East Windsor, CT &nbsp;·&nbsp; Open to Local Travel &nbsp;·&nbsp; US Work Authorized</span>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<div class="impact-strip">
+  <div>
+    <div class="impact-num">10<span class="sup">+</span></div>
+    <div class="impact-desc">Hours/Month Automated at Balaji Infotech</div>
+  </div>
+  <div>
+    <div class="impact-num">100<span class="sup">%</span></div>
+    <div class="impact-desc">UAT Issues Resolved Before Production</div>
+  </div>
+  <div>
+    <div class="impact-num">3</div>
+    <div class="impact-desc">Enterprise CRM Implementations Led</div>
+  </div>
+  <div>
+    <div class="impact-num">360<span class="sup">°</span></div>
+    <div class="impact-desc">Full Lifecycle Ownership: Onboarding → Expansion</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-eyebrow">Who I Am</div>
+  <div class="section-divider"></div>
+  <h2 class="section-title">A People-First Analyst<br>Backed by Data</h2>
+
+  <!-- FIX 3: Professional Summary block -->
+  <div style="background:var(--navy);border-radius:14px;padding:1.75rem 2rem;margin-bottom:2.5rem;border-left:4px solid var(--gold);">
+    <div style="font-family:'Caveat',cursive;font-size:1rem;color:var(--gold-light);margin-bottom:0.6rem;">Professional Summary</div>
+    <p style="font-size:0.93rem;line-height:1.85;color:rgba(255,255,255,0.78);margin:0;">Results-driven <strong style="color:var(--gold-light);">Business Analyst and Implementation Consultant</strong> with 4+ years of experience across finance, nonprofit, and B2B SaaS. Skilled in end-to-end SDLC management, Business Requirements Documents (BRD), UAT coordination, JIRA/Confluence project tracking, and Power BI KPI dashboards. Strong background in CRM/ERP implementations, gap analysis, data governance, and stakeholder alignment. Dual master's degrees in Data Science and MBA Finance. Legally authorized to work in the United States.</p>
+  </div>
+  <div class="about-layout">
+    <div class="about-text">
+      <p>I'm a <strong>Business Analyst and Implementation Consultant</strong> with four years of hands-on experience turning complex business challenges into clear, workable solutions. My career has spanned financial services, nonprofit management, and B2B SaaS.</p>
+      <p>At <strong>Vtiger Systems</strong>, I managed enterprise CRM rollouts through the full <strong>SDLC</strong> — from requirements discovery and <strong>BRD</strong> authoring, through <strong>UAT</strong> coordination using <strong>JIRA</strong> and <strong>Confluence</strong>, to post-launch support. At <strong>Community Dreams Foundation</strong>, I built <strong>Power BI</strong> dashboards tracking donor retention <strong>KPIs</strong> and program outcomes, supporting <strong>data governance</strong> and executive reporting.</p>
+      <p>My <strong>dual master's degrees in Data Science and MBA Finance</strong> mean I'm equally comfortable in a requirements workshop, a gap analysis session, or a sprint retrospective.</p>
+      <div class="contact-card">
+        <div class="contact-card-title">Quick Contact</div>
+        <div class="contact-row"><span class="ico">✉️</span><span><span class="label">Email</span>sivanagendra.ch@gmail.com</span></div>
+        <div class="contact-row"><span class="ico">📞</span><span><span class="label">Phone</span>959-248-9488</span></div>
+        <div class="contact-row"><span class="ico">📍</span><span><span class="label">Location</span>East Windsor, CT, USA</span></div>
+        <div class="contact-row"><span class="ico">💼</span><span><span class="label">LinkedIn</span>linkedin.com/in/sivanagendrachennam</span></div>
+        <div class="contact-row"><span class="ico">🌐</span><span><span class="label">Work Auth</span>Authorized to work in the United States</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="skill-category">
+        <div class="skill-cat-label">Implementation &amp; Analysis</div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Requirements Gathering</span><div class="skill-track"><div class="skill-fill" style="width:92%"></div></div><span class="skill-pct">92%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">UAT Coordination</span><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Process Improvement</span><div class="skill-track"><div class="skill-fill" style="width:87%"></div></div><span class="skill-pct">87%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Change Management</span><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-label">Data &amp; Reporting</div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Power BI</span><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div><span class="skill-pct">88%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Advanced Excel</span><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">SQL Fundamentals</span><div class="skill-track"><div class="skill-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Financial Reporting</span><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-label">Project Management</div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Agile / Scrum</span><div class="skill-track"><div class="skill-fill" style="width:86%"></div></div><span class="skill-pct">86%</span></div>
+        <div class="skill-bar-row"><span class="skill-name-lbl">Stakeholder Mgmt</span><div class="skill-track"><div class="skill-fill" style="width:89%"></div></div><span class="skill-pct">89%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section section-alt">
+  <div class="section-eyebrow">Career Journey</div>
+  <div class="section-divider"></div>
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="exp-timeline">
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Business Analyst</div>
+        <span class="exp-period">Aug 2025 – Jan 2026</span>
+      </div>
+      <div class="exp-company">Community Dreams Foundation · Hartford, CT</div>
+      <ul class="exp-bullets">
+        <li>Led system implementation for donor management and program tracking modules, acting as implementation consultant for nonprofit stakeholders across multiple departments.</li>
+        <li>Spearheaded discovery sessions to document functional requirements and translate business needs into clear technical specifications for the development team.</li>
+        <li>Designed and executed user acceptance testing protocols — comprehensive test plans that identified critical issues before production deployment.</li>
+        <li>Delivered change management programs including user training and documentation, converting skeptical stakeholders into confident daily system users.</li>
+        <li>Built Power BI dashboards tracking donor retention and program cost-per-outcome metrics, giving the executive team real-time visibility into organisational performance.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Business Analyst / Customer Success Manager</div>
+        <span class="exp-period">Feb 2022 – May 2023</span>
+      </div>
+      <div class="exp-company">Vtiger Systems Pvt Ltd · B2B SaaS CRM</div>
+      <ul class="exp-bullets">
+        <li>Served as client-facing implementation consultant for enterprise CRM deployments, managing the full customer lifecycle from system onboarding through expansion.</li>
+        <li>Led concurrent implementations for multiple enterprise accounts simultaneously, coordinating timelines and deliverables across Finance and Operations modules.</li>
+        <li>Conducted in-depth requirements discovery with client stakeholders at multiple seniority levels, translating business pain points into actionable technical requirements.</li>
+        <li>Facilitated UAT across client organisations, developing robust test plans that consistently caught defects before production go-live.</li>
+        <li>Managed complex multi-timezone projects using Agile methodologies, facilitating sprint planning and retrospectives to keep implementations on schedule.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Finance Analyst</div>
+        <span class="exp-period">Jun 2020 – Jul 2021</span>
+      </div>
+      <div class="exp-company">Balaji Infotech</div>
+      <ul class="exp-bullets">
+        <li>Automated financial reporting workflows using advanced Excel functions, eliminating over 10 hours of manual work per month and significantly reducing reporting errors.</li>
+        <li>Partnered with department heads to understand operational decision-making needs, delivering tailored financial analyses that supported strategic planning.</li>
+        <li>Maintained accuracy standards while supporting month-end close, reconciliation processes, and audit preparation activities.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Junior Finance Executive</div>
+        <span class="exp-period">Jun 2018 – May 2020</span>
+      </div>
+      <div class="exp-company">LakshVen Solutions</div>
+      <ul class="exp-bullets">
+        <li>Supported M&amp;A transaction systems by building financial models and flagging data inconsistencies for high-stakes deals, contributing to more reliable due diligence.</li>
+        <li>Redesigned reconciliation processes, improving accuracy and reducing close cycle time through targeted workflow improvements.</li>
+        <li>Developed internal controls documentation and process standards that enhanced audit readiness and the organisation's compliance posture.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-eyebrow">What I've Built</div>
+  <div class="section-divider"></div>
+  <h2 class="section-title">Key Project Highlights</h2>
+  <div class="projects-grid">
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap gold">📊</div>
+        <div class="proj-title">Donor Retention Power BI Dashboard</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built an executive-facing Power BI dashboard at Community Dreams Foundation tracking donor retention rates and program cost-per-outcome. Enabled data-driven fundraising strategy decisions.</p>
+        <div class="proj-outcome">Real-time executive visibility into program ROI</div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap blue">🔄</div>
+        <div class="proj-title">Enterprise CRM Implementation</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Led end-to-end Vtiger CRM onboarding for multiple enterprise clients — managing requirements, configuration, UAT, and post-launch support across Finance and Operations modules.</p>
+        <div class="proj-outcome">Full lifecycle ownership across multi-timezone accounts</div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap rust">✅</div>
+        <div class="proj-title">UAT Framework Design</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Designed comprehensive user acceptance testing protocols across nonprofit and SaaS environments, consistently catching critical defects before production deployments.</p>
+        <div class="proj-outcome">Zero critical defects reaching production</div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap gold">⚡</div>
+        <div class="proj-title">Financial Reporting Automation</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Used advanced Excel macros and formulas to automate monthly financial reporting at Balaji Infotech, removing manual bottlenecks and improving month-end accuracy.</p>
+        <div class="proj-outcome">10+ hours of manual effort eliminated monthly</div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap blue">🏛️</div>
+        <div class="proj-title">M&amp;A Financial Modelling</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built financial models to support M&amp;A transactions at LakshVen Solutions, flagging data inconsistencies that improved the reliability of due diligence documentation.</p>
+        <div class="proj-outcome">Reduced data risk in high-stakes deal reviews</div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon-wrap rust">🎯</div>
+        <div class="proj-title">Stakeholder Change Management</div>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Delivered structured training programs and tailored documentation across nonprofit and SaaS implementations, converting resistant stakeholders into active daily system users.</p>
+        <div class="proj-outcome">Skeptical users → confident daily power users</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section section-alt">
+  <div class="section-eyebrow">Capabilities</div>
+  <div class="section-divider"></div>
+  <h2 class="section-title">Skills &amp; Tools</h2>
+  <div class="skills-vis-wrap">
+    <div class="donut-grid">
+      <div class="donut-item">
+        <svg class="donut-svg" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="42" fill="none" stroke="#e8dfc8" stroke-width="10"/>
+          <circle cx="55" cy="55" r="42" fill="none" stroke="url(#g1)" stroke-width="10" stroke-dasharray="235 264" stroke-dashoffset="66" stroke-linecap="round"/>
+          <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#1a2744"/><stop offset="100%" stop-color="#c8973a"/></linearGradient></defs>
+          <text x="55" y="51" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="600" fill="#1a2744">89%</text>
+          <text x="55" y="65" text-anchor="middle" font-family="Nunito,sans-serif" font-size="7.5" fill="#718096">STAKEHOLDER</text>
+        </svg>
+        <div class="donut-label">Stakeholder Mgmt</div>
+        <div class="donut-sub">Discovery · Alignment · Comms</div>
+      </div>
+      <div class="donut-item">
+        <svg class="donut-svg" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="42" fill="none" stroke="#e8dfc8" stroke-width="10"/>
+          <circle cx="55" cy="55" r="42" fill="none" stroke="url(#g2)" stroke-width="10" stroke-dasharray="229 264" stroke-dashoffset="66" stroke-linecap="round"/>
+          <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#1a2744"/><stop offset="100%" stop-color="#c8973a"/></linearGradient></defs>
+          <text x="55" y="51" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="600" fill="#1a2744">87%</text>
+          <text x="55" y="65" text-anchor="middle" font-family="Nunito,sans-serif" font-size="7.5" fill="#718096">PROCESS</text>
+        </svg>
+        <div class="donut-label">Process Analysis</div>
+        <div class="donut-sub">BPMN · Gap Analysis · UAT</div>
+      </div>
+      <div class="donut-item">
+        <svg class="donut-svg" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="42" fill="none" stroke="#e8dfc8" stroke-width="10"/>
+          <circle cx="55" cy="55" r="42" fill="none" stroke="url(#g3)" stroke-width="10" stroke-dasharray="222 264" stroke-dashoffset="66" stroke-linecap="round"/>
+          <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#1a2744"/><stop offset="100%" stop-color="#c8973a"/></linearGradient></defs>
+          <text x="55" y="51" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="600" fill="#1a2744">84%</text>
+          <text x="55" y="65" text-anchor="middle" font-family="Nunito,sans-serif" font-size="7.5" fill="#718096">DATA &amp; BI</text>
+        </svg>
+        <div class="donut-label">Data &amp; BI</div>
+        <div class="donut-sub">Power BI · SQL · Excel</div>
+      </div>
+      <div class="donut-item">
+        <svg class="donut-svg" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="42" fill="none" stroke="#e8dfc8" stroke-width="10"/>
+          <circle cx="55" cy="55" r="42" fill="none" stroke="url(#g4)" stroke-width="10" stroke-dasharray="217 264" stroke-dashoffset="66" stroke-linecap="round"/>
+          <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%"><stop offset="0%" stop-color="#1a2744"/><stop offset="100%" stop-color="#c8973a"/></linearGradient></defs>
+          <text x="55" y="51" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="600" fill="#1a2744">82%</text>
+          <text x="55" y="65" text-anchor="middle" font-family="Nunito,sans-serif" font-size="7.5" fill="#718096">AGILE/PM</text>
+        </svg>
+        <div class="donut-label">Agile / Scrum</div>
+        <div class="donut-sub">Sprint · Retrospectives · JIRA</div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.8;margin-bottom:1.5rem;">Here are the key technologies and methods I use regularly across all my roles:</p>
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;">ERP &amp; Systems</div>
+        <div class="tools-cloud">
+          <span class="tool-chip chip-navy">CRM Administration</span>
+          <span class="tool-chip chip-navy">Vtiger CRM</span>
+          <span class="tool-chip chip-navy">Salesforce</span>
+          <span class="tool-chip chip-navy">SaaS Platforms</span>
+          <span class="tool-chip chip-navy">System Configuration</span>
+        </div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;">Data &amp; Analytics</div>
+        <div class="tools-cloud">
+          <span class="tool-chip chip-gold">Power BI</span>
+          <span class="tool-chip chip-gold">SQL</span>
+          <span class="tool-chip chip-gold">Advanced Excel</span>
+          <span class="tool-chip chip-gold">VBA / Macros</span>
+          <span class="tool-chip chip-gold">Data Visualisation</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;">Project Tools</div>
+        <div class="tools-cloud">
+          <span class="tool-chip chip-soft">Agile / Scrum</span>
+          <span class="tool-chip chip-soft">UAT Frameworks</span>
+          <span class="tool-chip chip-soft">Technical Docs</span>
+          <span class="tool-chip chip-soft">Training Design</span>
+          <span class="tool-chip chip-soft">Workflow Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="section">
+  <div class="section-eyebrow">Qualifications</div>
+  <div class="section-divider"></div>
+  <h2 class="section-title">Education &amp; Certifications</h2>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-badge-icon">📊</div>
+      <div class="cert-info"><div class="cert-issuer">Microsoft</div><div class="cert-name">Power BI Data Analytics</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon">📈</div>
+      <div class="cert-info"><div class="cert-issuer">Analytics</div><div class="cert-name">Business Analytics with Excel</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon">🔒</div>
+      <div class="cert-info"><div class="cert-issuer">Compliance</div><div class="cert-name">Data Privacy Fundamentals</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon">☁️</div>
+      <div class="cert-info"><div class="cert-issuer">SaaS</div><div class="cert-name">SaaS Fundamentals</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon">🤝</div>
+      <div class="cert-info"><div class="cert-issuer">CRM</div><div class="cert-name">CRM Administration</div></div>
+    </div>
+    <div class="cert-card" style="background:linear-gradient(135deg,rgba(200,151,58,0.08),rgba(26,39,68,0.04));border:1.5px solid rgba(200,151,58,0.25);">
+      <div class="cert-badge-icon" style="background:linear-gradient(135deg,var(--gold),var(--gold-light));">🛠️</div>
+      <div class="cert-info"><div class="cert-issuer" style="color:var(--navy);">Core Technical</div><div class="cert-name" style="color:var(--gold);">SQL · Power BI · Excel VBA · Agile · Scrum</div></div>
+    </div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-degree">M.S. Data Science &amp; Analytics</div>
+      <div class="edu-school">New England College, USA</div>
+      <div class="edu-year">2025 · DB Systems · BI · Data Transformation</div>
+    </div>
+    <div class="edu-card" style="background:linear-gradient(135deg,#1f3a6e,#2e4070);">
+      <div class="edu-degree">MBA Finance</div>
+      <div class="edu-school">JNT University (KITS), India</div>
+      <div class="edu-year">2020</div>
+    </div>
+    <div class="edu-card" style="background:linear-gradient(135deg,#2a3a5c,#1a2744);">
+      <div class="edu-degree">B.Com Accounting &amp; Finance</div>
+      <div class="edu-school">Acharya Nagarjuna University, India</div>
+      <div class="edu-year">2018</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <div class="contact-layout">
+    <div class="contact-form-area">
+      <div class="section-eyebrow">Say Hello</div>
+      <div class="section-divider"></div>
+      <h3>Send Me a Message</h3>
+      <p>Whether you have a role in mind, a project to discuss, or just want to connect — I'd love to hear from you. I typically respond within 24 hours.</p>
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Sarah Johnson"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="sarah@company.com"></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the opportunity or what you have in mind..."></textarea></div>
+      <button class="submit-btn" id="contact-btn">Send Message</button>
+    </div>
+    <div class="contact-info-side">
+      <div class="section-eyebrow">Direct Contact</div>
+      <h3>Let's Work Together</h3>
+      <div class="ci-cards">
+        <div class="ci-card">
+          <div class="ci-card-icon">✉️</div>
+          <div><div class="ci-card-label">Email</div><div class="ci-card-value">sivanagendra.ch@gmail.com</div></div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-card-icon">📞</div>
+          <div><div class="ci-card-label">Phone</div><div class="ci-card-value">959-248-9488</div></div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-card-icon">📍</div>
+          <div><div class="ci-card-label">Location</div><div class="ci-card-value">East Windsor, CT · Open to local travel</div></div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-card-icon">💼</div>
+          <div><div class="ci-card-label">LinkedIn</div><div class="ci-card-value">linkedin.com/in/sivanagendrachennam</div></div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-card-icon">🌐</div>
+          <div><div class="ci-card-label">Work Authorization</div><div class="ci-card-value">Legally authorized to work in the US</div></div>
+        </div>
+      </div>
+      <div class="availability-block">
+        <div class="avail-dot"></div>
+        <div class="avail-text">Currently <span>open to new opportunities</span> — BA, Implementation Consultant, and Data Analyst roles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Siva Nagendra Babu Chennam · All rights reserved</p>
+  <div class="footer-sig">Siva Chennam</div>
+  <p>Portfolio · <a href="mailto:sivanagendra.ch@gmail.com">sivanagendra.ch@gmail.com</a></p>
+</footer>
+
+<script>
+// ── Right-click block ──
+document.addEventListener('contextmenu', e => {
+  e.preventDefault();
+  alert('© 2026 Siva Nagendra Babu Chennam. Right-click is disabled.');
+});
+
+// ── Keyboard shortcut block ──
+document.addEventListener('keydown', e => {
+  if (
+    (e.ctrlKey && ['u','s','p','a'].includes(e.key.toLowerCase())) ||
+    (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) ||
+    e.key === 'F12'
+  ) {
+    e.preventDefault();
+  }
+});
+
+// ── Copy watermark ──
+document.addEventListener('copy', e => {
+  const sel = window.getSelection ? window.getSelection().toString() : '';
+  if (sel.length > 0) {
+    e.clipboardData.setData('text/plain',
+      sel + '\n\n© 2026 Siva Nagendra Babu Chennam. All rights reserved.'
+    );
+    e.preventDefault();
+  }
+});
+
+// ── iframe block ──
+if (window.top !== window.self) window.top.location = window.self.location;
+
+// ── Contact button ──
+document.getElementById('contact-btn').addEventListener('click', function() {
+  this.textContent = '✓ Opening email client…';
+  this.style.background = '#16a34a';
+  setTimeout(() => { window.location.href = 'mailto:sivanagendra.ch@gmail.com?subject=Portfolio Enquiry'; }, 600);
+});
+
+// ── Smooth scroll for nav links ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
